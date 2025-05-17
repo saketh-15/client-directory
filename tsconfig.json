@@ -18,5 +18,11 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "content": [
+  "./app/**/*.{js,ts,jsx,tsx}",
+  "./pages/**/*.{js,ts,jsx,tsx}",
+  "./components/**/*.{js,ts,jsx,tsx}",
+]
+
 }
