@@ -19,7 +19,7 @@ export default function Home({ initialClients }: any) {
     const data = await res.json();
     setClients(data);
   }
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
     
     // Remove any non-digit characters
