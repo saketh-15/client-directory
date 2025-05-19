@@ -97,21 +97,29 @@ export default function Home({ initialClients }: any) {
                   </div>
 
                   <div className="flex items-end">
+                    
                     <button
-                      className="bg-red-900 text-white rounded-md px-4 py-3 hover:bg-red-800  h-[42px]" /* Increased padding and text size */
+                      className="bg-red-900 rounded-md px-4 py-3 hover:bg-red-800 h-[42px] flex items-center justify-center"
                       onClick={handleSearch}
                     >
-                      🔍
+                      <img src="/search-icon.png" alt="Search" className="w-5 h-5" />
                     </button>
+
+                   
                     <div className="flex items-center text-sm font-medium ml-[100px]">
-                      <button className="hover:text-red-700 text-xl mx-2">🔔</button>
-                      <button className="hover:text-red-700 text-xl mx-2">⚙️</button>
+                      <button className="mx-2">
+                        <img src="/notification-icon.png" alt="Notifications" className="w-6 h-6" />
+                      </button>
+                      <button className="mx-2">
+                        <img src="/settings-icon.png" alt="Settings" className="w-6 h-6" />
+                      </button>
                       <img
                         src="/profile-pic.jpg"
                         alt="Profile"
-                        className="w-11 h-11 rounded-full object-cover border-2 border-gray-300 ml-4" /* Added ml-4 to separate from icons */
+                        className="w-11 h-11 rounded-full object-cover border-2 border-gray-300 ml-4"
                       />
                     </div>
+
                   </div>
 
                 </div>
