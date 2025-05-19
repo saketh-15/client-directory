@@ -50,7 +50,9 @@ export default function Home({ initialClients }: any) {
       <main className="min-h-screen bg-white p-6 flex justify-center items-start">
         <div className="w-full max-w-7xl space-y-8">
           {/* Filter Section */}
-          <div className="bg-white shadow-md rounded-xl px-8 py-5"> {/* Added px-8 for horizontal padding */}
+          
+          <div className="bg-white border border-[#E0D6C0] rounded-[10px] shadow-[0_5px_15px_0_rgba(0,0,0,0.2)] px-8 py-6">
+
             <div className="flex justify-between items-start">
               <div className="space-y-4 w-full">
                 <h2 className="text-2xl font-semibold text-red-900">Client Directory</h2>
@@ -119,29 +121,31 @@ export default function Home({ initialClients }: any) {
           </div>
 
           {/* Table Section */}
-          <div className="bg-white shadow-md rounded-xl overflow-x-auto">
-            <table className="min-w-full text-sm text-left">
+          <div className="bg-white shadow-[0_5px_15px_rgba(0,0,0,0.2)] rounded-[10px] overflow-x-auto border border-[#E0D6C0]">
+            <table className="min-w-full text-sm text-left border-separate border-spacing-0">
               <thead>
                 <tr className="bg-red-900 text-white">
-                  <th className="px-6 py-3 h-12 text-lg font-semibold w-[400px]">Name</th>
-                  <th className="px-6 py-3 h-12 text-lg font-semibold">Birthday</th>
-                  <th className="px-6 py-3 h-12 text-lg font-semibold">Type</th>
-                  <th className="px-6 py-3 h-12 text-lg font-semibold">Account</th>
-                  <th className="px-6 py-3 h-12 text-lg font-semibold">Balance</th>
-                  <th className="px-6 py-3 h-12 text-lg font-semibold">Actions</th>
+                  <th className="border-b border-[#E0D6C0] px-6 py-4 text-base font-semibold text-left rounded-tl-[10px]">Name</th>
+                  <th className="border-b border-[#E0D6C0] px-6 py-4 text-base font-semibold text-left">Birthday</th>
+                  <th className="border-b border-[#E0D6C0] px-6 py-4 text-base font-semibold text-left">Type</th>
+                  <th className="border-b border-[#E0D6C0] px-6 py-4 text-base font-semibold text-left">Account</th>
+                  <th className="border-b border-[#E0D6C0] px-6 py-4 text-base font-semibold text-left">Balance</th>
+                  <th className="border-b border-[#E0D6C0] px-6 py-4 text-base font-semibold text-left rounded-tr-[10px]">Actions</th>
                 </tr>
               </thead>
               <tbody className="text-gray-800">
                 {clients.map((client: any, index: number) => (
-                  <tr key={index} className="border-b hover:bg-gray-50 leading-relaxed">
-                    <td className="px-6 py-3">{client.name}</td>
-                    <td className="px-6 py-3">{client.birthday}</td>
-                    <td className="px-6 py-3">{client.type}</td>
-                    <td className="px-6 py-3">{client.account}</td>
-                    <td className="px-6 py-3 font-bold">${client.balance.toFixed(2)}</td>
-                    <td className="px-6 py-3 space-x-2 text-sm">
-                      <button className="text-red-700 hover:underline hover:text-blue-500">Details |</button>
-                      <button className="text-red-700 hover:underline hover:text-blue-500">Transfer |</button>
+                  <tr key={index} className="hover:bg-gray-50 border-t border-[#E0D6C0]">
+                    <td className="px-6 py-4 border-b border-[#E0D6C0]">{client.name}</td>
+                    <td className="px-6 py-4 border-b border-[#E0D6C0]">{client.birthday}</td>
+                    <td className="px-6 py-4 border-b border-[#E0D6C0]">{client.type}</td>
+                    <td className="px-6 py-4 border-b border-[#E0D6C0]">{client.account}</td>
+                    <td className="px-6 py-4 font-bold border-b border-[#E0D6C0]">${client.balance.toFixed(2)}</td>
+                    <td className="px-6 py-4 border-b border-[#E0D6C0] space-x-2 text-sm">
+                      <button className="text-red-700 hover:underline hover:text-blue-500">Details</button>
+                      <span className="text-red-700">|</span>
+                      <button className="text-red-700 hover:underline hover:text-blue-500">Transfer</button>
+                      <span className="text-red-700">|</span>
                       <button className="text-red-700 hover:underline hover:text-blue-500">Close Account</button>
                     </td>
                   </tr>
@@ -149,6 +153,7 @@ export default function Home({ initialClients }: any) {
               </tbody>
             </table>
           </div>
+
         </div>
       </main>
     </>
